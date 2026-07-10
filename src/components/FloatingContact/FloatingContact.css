@@ -276,7 +276,7 @@
 .schedule-modal-field input:focus,
 .schedule-modal-field select:focus {
   border-color: var(--color-cta-red);
-  background: white;
+  background-color: white;
   box-shadow: 0 0 0 4px rgba(229, 57, 53, 0.05);
 }
 
