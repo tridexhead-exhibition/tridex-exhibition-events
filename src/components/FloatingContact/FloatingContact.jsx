@@ -299,6 +299,7 @@ function FloatingContact() {
                     name="date"
                     value={formData.date}
                     onChange={handleInputChange}
+                    min={new Date().toISOString().split('T')[0]}
                     required
                   />
                 </div>
