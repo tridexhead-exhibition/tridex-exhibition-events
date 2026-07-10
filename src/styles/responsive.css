@@ -1,0 +1,45 @@
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* --- Laptop (max-width: 1200px) --- */
+@media (max-width: 1200px) {
+  :root {
+    --fs-hero-main: 2.25rem;
+    --fs-hero-sub: 1.5rem;
+  }
+
+  .container {
+    padding: 0 var(--space-lg);
+  }
+}
+
+/* --- Tablet (max-width: 992px) --- */
+@media (max-width: 992px) {
+  :root {
+    --fs-hero-main: 2rem;
+    --fs-hero-sub: 1.35rem;
+    --navbar-height: 80px;
+  }
+}
+
+/* --- Mobile (max-width: 768px) --- */
+@media (max-width: 768px) {
+  :root {
+    --fs-hero-main: 1.75rem;
+    --fs-hero-sub: 1.2rem;
+    --fs-base: 0.875rem;
+  }
+
+  .container {
+    padding: 0 var(--space-md);
+  }
+}
+
+/* --- Small Mobile (max-width: 480px) --- */
+@media (max-width: 480px) {
+  :root {
+    --fs-hero-main: 1.45rem;
+    --fs-hero-sub: 1.05rem;
+  }
+}

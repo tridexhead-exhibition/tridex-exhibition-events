@@ -1,0 +1,83 @@
+/* ============================================
+   CSS VARIABLES — Design Tokens
+   ============================================ */
+
+:root {
+  /* ---- Colors ---- */
+  --color-primary: #152439;
+  --color-primary-dark: #0e1a2b;
+  --color-white: #ffffff;
+  --color-blue-accent: #4DB8FF;
+  --color-cta-red: #E53935;
+  --color-cta-red-hover: #c62828;
+  --color-text: #222222;
+  --color-text-light: #555555;
+  --color-light-bg: #F7F8FA;
+  --color-overlay: rgba(15, 25, 40, 0.65);
+  --color-border: #e0e0e0;
+
+  /* ---- Typography ---- */
+  --font-primary: 'Poppins', 'Montserrat', sans-serif;
+  --font-fallback: 'Montserrat', sans-serif;
+
+  --fs-xs: 0.75rem;       /* 12px */
+  --fs-sm: 0.8125rem;     /* 13px */
+  --fs-base: 0.9375rem;   /* 15px */
+  --fs-md: 1rem;          /* 16px */
+  --fs-lg: 1.125rem;      /* 18px */
+  --fs-xl: 1.25rem;       /* 20px */
+  --fs-2xl: 1.5rem;       /* 24px */
+  --fs-3xl: 2rem;         /* 32px */
+  --fs-4xl: 2.5rem;       /* 40px */
+  --fs-5xl: 3rem;         /* 48px */
+  --fs-hero-sub: 1.75rem; /* 28px */
+  --fs-hero-main: 2.75rem;/* 44px */
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+
+  --lh-tight: 1.2;
+  --lh-snug: 1.35;
+  --lh-normal: 1.6;
+  --lh-relaxed: 1.8;
+
+  /* ---- Spacing ---- */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+
+  /* ---- Layout ---- */
+  --container-max: 1200px;
+  --container-wide: 1400px;
+  --navbar-height: 120px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 25px;
+  --border-radius-full: 50%;
+
+  /* ---- Transitions ---- */
+  --transition-fast: 200ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  /* ---- Shadows ---- */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+  --shadow-xl: 0 12px 48px rgba(0, 0, 0, 0.2);
+
+  /* ---- Z-Index ---- */
+  --z-navbar: 1000;
+  --z-floating: 1050;
+  --z-overlay: 900;
+  --z-modal: 1100;
+}

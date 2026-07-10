@@ -1,0 +1,189 @@
+/* ============================================
+   PROCESS SECTION STYLES
+   ============================================ */
+
+.process-section {
+  padding: var(--space-4xl) 0;
+  background-color: transparent;
+}
+
+.process-header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.process-header-title {
+  font-size: 2.25rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-text);
+  line-height: var(--lh-tight);
+}
+
+.process-header-accent {
+  background-image: linear-gradient(90deg, #e53935 0%, #b82d2f 50%, #7d1c27 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.process-header-desc {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-regular);
+  color: var(--color-text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Process Cards Grid */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.process-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background-color: var(--color-white);
+  border: 1.5px solid #ffcdd2; /* Highly visible light red border */
+  border-radius: var(--border-radius-md);
+  padding: var(--space-xl) var(--space-lg);
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(229, 57, 53, 0.03); /* Subtle red glow shadow */
+  transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.process-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-cta-red); /* Revert focus color to brand Red */
+  box-shadow: 0 12px 30px rgba(229, 57, 53, 0.08);
+}
+
+/* Outlined Red Circle Icon */
+.process-card__icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--border-radius-full);
+  border: 2px solid var(--color-cta-red);
+  margin: 0 auto var(--space-md);
+  background-color: rgba(229, 57, 53, 0.02);
+  transition: background-color var(--transition-base), transform var(--transition-base), border-color var(--transition-base);
+}
+
+/* Gradient text color for the outline icon */
+.process-card__icon-wrapper i {
+  background: linear-gradient(90deg, #e53935 0%, #b82d2f 50%, #7d1c27 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.4rem;
+  transition: -webkit-text-fill-color var(--transition-base);
+}
+
+.process-card:hover .process-card__icon-wrapper {
+  background: linear-gradient(90deg, #c62828 0%, #9e2225 50%, #6d1520 100%);
+  border-color: transparent;
+  transform: scale(1.05);
+}
+
+/* Make inner icon white when background turns solid gradient on hover */
+.process-card:hover .process-card__icon-wrapper i {
+  -webkit-text-fill-color: var(--color-white);
+}
+
+.process-card__title {
+  font-size: 0.95rem;
+  font-weight: var(--fw-bold);
+  color: #9e2a2b; /* Revert to premium dark red title color */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--space-sm);
+  line-height: var(--lh-tight);
+}
+
+.process-card__desc {
+  font-size: 0.85rem;
+  font-weight: var(--fw-regular);
+  color: var(--color-text-light);
+  line-height: var(--lh-relaxed);
+}
+
+/* ============================================
+   RESPONSIVE — PROCESS
+   ============================================ */
+
+@media (max-width: 1200px) {
+  .process-grid {
+    gap: var(--space-lg);
+  }
+}
+
+@media (max-width: 992px) {
+  .process-section {
+    padding: var(--space-3xl) 0;
+  }
+
+  .process-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .process-section {
+    padding: var(--space-2xl) 0;
+  }
+
+  .process-header-title {
+    font-size: 1.75rem;
+  }
+
+  .process-header-desc {
+    font-size: var(--fs-base);
+  }
+}
+
+@media (max-width: 576px) {
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .process-card {
+    padding: 16px 10px;
+    min-height: 235px;
+    height: 100%;
+  }
+
+  .process-card__icon-wrapper {
+    width: 44px;
+    height: 44px;
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+  }
+
+  .process-card__title {
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+    min-height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .process-card__desc {
+    font-size: 0.72rem;
+    line-height: 1.4;
+  }
+}

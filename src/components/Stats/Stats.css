@@ -1,0 +1,115 @@
+/* ============================================
+   STATS SECTION STYLES
+   ============================================ */
+
+.stats-section {
+  padding: var(--space-2xl) 0;
+  background: linear-gradient(135deg, #091a24 0%, #112936 100%); /* Premium dark navy-teal gradient */
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3xl);
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+/* Yellow-Red Brand Gradient Circular Icon Wrapper */
+.stat-card__icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: var(--border-radius-full);
+  background: linear-gradient(90deg, #e53935 0%, #b82d2f 50%, #7d1c27 100%);
+  color: var(--color-white);
+  font-size: 1.35rem;
+  box-shadow: 0 4px 15px rgba(229, 57, 53, 0.25);
+  transition: transform var(--transition-base), background var(--transition-base), box-shadow var(--transition-base);
+}
+
+.stat-card:hover .stat-card__icon-wrapper {
+  transform: scale(1.1) rotate(5deg);
+  background: linear-gradient(90deg, #c62828 0%, #9e2225 50%, #6d1520 100%);
+  box-shadow: 0 8px 20px rgba(229, 57, 53, 0.35);
+}
+
+.stat-card__number {
+  font-size: 2.25rem;
+  font-weight: var(--fw-extrabold);
+  color: var(--color-white);
+  line-height: 1.1;
+  font-family: var(--font-primary);
+  letter-spacing: -0.5px;
+}
+
+.stat-card__label {
+  font-size: 0.75rem;
+  font-weight: var(--fw-medium);
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 100px;
+  line-height: var(--lh-tight);
+}
+
+/* ============================================
+   RESPONSIVE — STATS
+   ============================================ */
+
+@media (max-width: 1200px) {
+  .stats-row {
+    gap: var(--space-xl);
+  }
+
+  .stat-card__number {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-section {
+    padding: var(--space-lg) 0;
+  }
+
+  .stats-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .stat-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    gap: 6px;
+  }
+
+  .stat-card__icon-wrapper {
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+  }
+
+  .stat-card__number {
+    font-size: 1.35rem;
+  }
+
+  .stat-card__label {
+    max-width: 85px;
+    font-size: 0.7rem;
+  }
+}

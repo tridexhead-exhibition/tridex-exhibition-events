@@ -1,0 +1,206 @@
+/* ============================================
+   LEGAL PAGES (PRIVACY POLICY & TERMS OF SERVICE)
+   ============================================ */
+
+.legal-page {
+  font-family: 'Poppins', Helvetica, Arial, Verdana, sans-serif !important;
+  color: var(--color-text);
+  background: transparent;
+  padding-bottom: 80px;
+}
+
+/* 1. Header Section with Premium Gradient */
+.legal-header {
+  background: linear-gradient(135deg, #091a24 0%, #152439 100%);
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.legal-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(229, 57, 53, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.legal-header-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.legal-category {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-cta-red);
+  margin-bottom: 15px;
+  display: block;
+}
+
+.legal-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--color-white);
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.legal-meta {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+/* 2. Content Layout */
+.legal-body-container {
+  max-width: 1000px;
+  margin: -40px auto 0;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.legal-card {
+  background: #ffffff;
+  border: 1.5px solid #ffcdd2;
+  border-radius: 20px;
+  padding: 60px 50px;
+  box-shadow: 0 15px 45px rgba(21, 36, 57, 0.06);
+}
+
+.legal-intro {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text-light);
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Sections & Typography */
+.legal-section {
+  margin-bottom: 40px;
+}
+
+.legal-section:last-child {
+  margin-bottom: 0;
+}
+
+.legal-section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.legal-section-title::before {
+  content: '';
+  width: 4px;
+  height: 20px;
+  background: var(--color-cta-red);
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.legal-text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text-light);
+  margin-bottom: 15px;
+}
+
+.legal-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.legal-list li {
+  position: relative;
+  padding-left: 28px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-light);
+}
+
+.legal-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: var(--color-cta-red);
+  font-weight: bold;
+}
+
+/* Contact block inside legal page */
+.legal-contact-box {
+  background: rgba(229, 57, 53, 0.02);
+  border: 1px dashed #ffcdd2;
+  border-radius: 12px;
+  padding: 25px;
+  margin-top: 30px;
+}
+
+.legal-contact-box p {
+  margin-bottom: 10px;
+}
+
+.legal-contact-box p:last-child {
+  margin-bottom: 0;
+}
+
+.legal-contact-box strong {
+  color: var(--color-primary);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  .legal-header {
+    padding: 60px 0;
+  }
+
+  .legal-title {
+    font-size: 2.2rem;
+  }
+
+  .legal-card {
+    padding: 35px 25px;
+    border-radius: 16px;
+  }
+
+  .legal-intro {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+  }
+
+  .legal-section-title {
+    font-size: 1.2rem;
+  }
+
+  .legal-list li {
+    font-size: 0.9rem;
+  }
+}
