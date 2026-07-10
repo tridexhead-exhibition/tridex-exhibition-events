@@ -34,7 +34,7 @@ export default async function handler(req, res) {
         'Authorization': `Bearer ${resendApiKey}`
       },
       body: JSON.stringify({
-        from: 'Tridex Schedule Call <onboarding@resend.dev>', // Replace with verified sender domain on Resend
+        from: 'Tridex Schedule Call <info@tridexexhibit.com>',
         to: 'info@tridexexhibit.com',
         subject: `New Call Scheduled: ${name} on ${date}`,
         html: `
