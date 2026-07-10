@@ -18,6 +18,18 @@ function FloatingContact() {
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [submittedDetails, setSubmittedDetails] = useState(null);
 
+  const recordSubmission = (emailVal, phoneVal) => {
+    try {
+      const history = JSON.parse(localStorage.getItem('tridex_submission_history') || '[]');
+      history.push({
+        email: emailVal.trim(),
+        phone: phoneVal.trim(),
+        timestamp: Date.now()
+      });
+      localStorage.setItem('tridex_submission_history', JSON.stringify(history));
+    } catch (e) {}
+  };
+
   const modalRef = useRef(null);
 
   // Close schedule call modal on clicking outside card
@@ -84,12 +96,24 @@ function FloatingContact() {
       return;
     }
 
-    // 5. Rate limiter
-    const lastSubmit = localStorage.getItem('tridex_schedule_submit_time');
+    // 5. Rate Limiting (Max 1 submission per 10 minutes for same email or phone)
     const now = Date.now();
-    if (lastSubmit && now - parseInt(lastSubmit) < 60000) {
-      const waitTime = Math.ceil((60000 - (now - parseInt(lastSubmit))) / 1000);
-      setError(`Please wait ${waitTime} seconds before scheduling another call.`);
+    const submissionsKey = 'tridex_submission_history';
+    let history = [];
+    try {
+      history = JSON.parse(localStorage.getItem(submissionsKey) || '[]');
+    } catch (e) {}
+
+    // Clean up entries older than 10 minutes (600,000 ms)
+    history = history.filter(item => now - item.timestamp < 600000);
+
+    const duplicate = history.find(item => 
+      item.email.toLowerCase() === email.trim().toLowerCase() || item.phone.trim() === phone.trim()
+    );
+
+    if (duplicate) {
+      const waitTimeMinutes = Math.ceil((600000 - (now - duplicate.timestamp)) / 60000);
+      setError(`For security, you can only schedule one call every 10 minutes. Please wait ${waitTimeMinutes} minute(s) before submitting again.`);
       return;
     }
 
@@ -114,6 +138,7 @@ function FloatingContact() {
 
       const result = await response.json();
       if (response.ok && result.success) {
+        recordSubmission(email, phone);
         localStorage.setItem('tridex_schedule_submit_time', Date.now().toString());
         setSubmittedDetails(sanitizedData);
         setShowSuccessModal(true);
@@ -130,6 +155,7 @@ function FloatingContact() {
     if (WEB3FORMS_ACCESS_KEY === "YOUR_ACCESS_KEY_HERE" || !WEB3FORMS_ACCESS_KEY) {
       setTimeout(() => {
         setIsSubmitting(false);
+        recordSubmission(email, phone);
         localStorage.setItem('tridex_schedule_submit_time', Date.now().toString());
         setSubmittedDetails(sanitizedData);
         setShowSuccessModal(true);
@@ -156,6 +182,7 @@ function FloatingContact() {
 
       const result = await response.json();
       if (result.success) {
+        recordSubmission(email, phone);
         localStorage.setItem('tridex_schedule_submit_time', Date.now().toString());
         setSubmittedDetails(sanitizedData);
         setShowSuccessModal(true);
