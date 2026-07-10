@@ -87,21 +87,49 @@ export default async function handler(req, res) {
             to: email,
             subject: `Confirmation: Call Scheduled with Tridex Exhibitions`,
             html: `
-              <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; border: 1px solid #eee; padding: 20px; border-radius: 10px;">
-                <h2 style="color: #091a24; border-bottom: 2px solid #e53935; padding-bottom: 10px; margin-top: 0;">Call Callback Confirmed</h2>
-                <p>Dear ${name},</p>
-                <p>Thank you for scheduling a callback with <strong>Tridex Exhibitions &amp; Events</strong>. We have successfully received your callback request.</p>
-                <div style="background-color: #f9f9f9; padding: 15px; border-radius: 6px; border: 1px solid #ddd; margin: 20px 0;">
-                  <h4 style="margin-top: 0; color: #091a24; margin-bottom: 8px;">Scheduled Details:</h4>
-                  <p style="margin: 0; font-size: 0.95rem; color: #555;"><strong>Date:</strong> ${date}</p>
-                  <p style="margin: 0; font-size: 0.95rem; color: #555;"><strong>Time Slot:</strong> ${timeSlot}</p>
+              <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333333; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-top: 5px solid #e53935; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+                <!-- Header Banner -->
+                <div style="background-color: #091a24; padding: 25px 30px; text-align: center;">
+                  <h1 style="color: #ffffff; margin: 0; font-size: 22px; font-weight: 700; letter-spacing: 1px;">TRIDEX EXHIBITIONS</h1>
+                  <p style="color: #e53935; margin: 5px 0 0 0; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Exhibition Stand Builder &amp; Turnkey Contractor</p>
                 </div>
-                <p>One of our project managers will call you back on your number <strong>${phone}</strong> during the selected slot. If you need to make any changes or share layouts, feel free to reply directly to this email or write to us at <a href="mailto:info@tridexexhibit.com" style="color: #e53935; text-decoration: none;">info@tridexexhibit.com</a>.</p>
-                <br/>
-                <p>Best Regards,</p>
-                <p><strong>Team Tridex Exhibitions</strong><br/>
-                <span style="color: #888; font-size: 0.9rem;">Exhibition Stand Builder &amp; Turnkey Contractor</span><br/>
-                <a href="https://tridexexhibit.com" style="color: #e53935; text-decoration: none;">www.tridexexhibit.com</a></p>
+                
+                <!-- Content Area -->
+                <div style="padding: 30px;">
+                  <h2 style="color: #091a24; font-size: 18px; font-weight: 600; margin-top: 0; margin-bottom: 20px;">Call Callback Confirmed</h2>
+                  <p style="font-size: 15px; margin-bottom: 15px;">Dear <strong>${name}</strong>,</p>
+                  <p style="font-size: 15px; margin-bottom: 15px; color: #555555;">Thank you for scheduling a callback with <strong>Tridex Exhibitions &amp; Events</strong>. We have successfully received your callback request.</p>
+                  
+                  <!-- Summary Card -->
+                  <div style="background-color: #f8f9fa; border-left: 4px solid #e53935; padding: 20px; border-radius: 4px; margin-bottom: 25px;">
+                    <h3 style="margin-top: 0; color: #091a24; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Scheduled Details</h3>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                      <tr>
+                        <td style="padding: 4px 0; color: #777777; width: 35%;">Date:</td>
+                        <td style="padding: 4px 0; color: #091a24; font-weight: 600;">${date}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 4px 0; color: #777777;">Time Slot:</td>
+                        <td style="padding: 4px 0; color: #091a24; font-weight: 600;">${timeSlot}</td>
+                      </tr>
+                    </table>
+                  </div>
+                  
+                  <p style="font-size: 14px; color: #555555; margin-bottom: 25px;">
+                    One of our project managers will call you back on your number <strong>${phone}</strong> during the selected slot. If you need to make any changes or share layouts, feel free to reply directly to this email or write to us at <a href="mailto:info@tridexexhibit.com" style="color: #e53935; text-decoration: none; font-weight: 600;">info@tridexexhibit.com</a>.
+                  </p>
+                  
+                  <!-- Footer Signature -->
+                  <div style="border-top: 1px solid #eeeeee; padding-top: 20px; margin-top: 25px;">
+                    <p style="margin: 0; font-size: 14px; font-weight: 600; color: #091a24;">Best Regards,</p>
+                    <p style="margin: 3px 0 0 0; font-size: 14px; font-weight: 600; color: #e53935;">Team Tridex Exhibitions</p>
+                    <p style="margin: 15px 0 0 0; font-size: 12px; color: #888888; line-height: 1.4;">
+                      <strong>Tridex Exhibitions &amp; Events</strong><br/>
+                      Exhibition Stand Builder &amp; Turnkey Contractor<br/>
+                      <a href="https://tridexexhibit.com" style="color: #e53935; text-decoration: none;">www.tridexexhibit.com</a> | <a href="mailto:info@tridexexhibit.com" style="color: #e53935; text-decoration: none;">info@tridexexhibit.com</a>
+                    </p>
+                  </div>
+                </div>
               </div>
             `
           })
