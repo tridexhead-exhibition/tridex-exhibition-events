@@ -1236,6 +1236,7 @@
     color: var(--color-white) !important;
     font-weight: 600;
     box-shadow: 0 4px 10px rgba(229, 57, 53, 0.15);
+    border-radius: 20px; /* Explicitly reset border-radius for active state on mobile */
   }
 
   .nav-item:hover:not(.active) {
