@@ -1,11 +1,19 @@
 {
+  "headers": [
+    {
+      "source": "/favicon.(ico|png)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, must-revalidate" }
+      ]
+    }
+  ],
   "rewrites": [
     {
       "source": "/api/:path*",
       "destination": "/api/:path*"
     },
     {
-      "source": "/((?!api/).*)",
+      "source": "/((?!api/|favicon\\.ico|favicon\\.png|logo\\.png|icons\\.svg|robots\\.txt|sitemap\\.xml|google[a-z0-9]*\\.html).*)",
       "destination": "/index.html"
     }
   ]
