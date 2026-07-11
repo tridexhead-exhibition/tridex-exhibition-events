@@ -302,7 +302,7 @@
 
 @media (max-width: 768px) {
   .navbar__badges {
-    display: flex !important; /* Keep visible on mobile screens */
+    display: flex !important; /* Keep visible on mobile/tablet screens above 600px */
     gap: 6px;                 /* Compact gap for small screens */
     align-items: center;
     justify-content: center;
@@ -329,7 +329,7 @@
   }
 
   .navbar__badge-stars {
-    display: none !important; /* Hide stars */
+    display: none !important; /* Hide stars in header */
   }
 
   .navbar__top {
@@ -424,6 +424,52 @@
   .navbar__mobile-contact-item i {
     color: var(--color-blue-accent);
     font-size: 0.8rem;
+  }
+
+  /* Mobile slide-out menu trust badges */
+  .navbar__mobile-badges {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 20px;
+  }
+
+  .navbar__mobile-badges .navbar__badge {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px !important;
+    padding: 10px 14px !important;
+    gap: 10px !important;
+    width: 100%;
+  }
+
+  .navbar__mobile-badges .navbar__badge-icon {
+    font-size: 1.2rem !important;
+  }
+
+  .navbar__mobile-badges .navbar__badge-label {
+    font-size: 0.8rem !important;
+    font-weight: var(--fw-semibold);
+    color: var(--color-white);
+  }
+
+  .navbar__mobile-badges .navbar__badge-stars {
+    display: flex !important;
+    gap: 2px;
+    font-size: 0.65rem !important;
+    margin-top: 2px;
+  }
+}
+
+/* Hide header badges on small mobile screens to prevent layout overflow */
+@media (max-width: 600px) {
+  .navbar__badges {
+    display: none !important;
   }
 }
 

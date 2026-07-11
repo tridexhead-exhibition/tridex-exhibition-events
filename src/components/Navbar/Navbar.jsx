@@ -239,6 +239,49 @@ function Navbar() {
               <span>+91 87964 11515</span>
             </a>
           </div>
+
+          {/* Mobile Badges */}
+          <div className="navbar__mobile-badges">
+            <a
+              href={TRUSTPILOT_URL || '#!'}
+              className="navbar__badge"
+              target={TRUSTPILOT_URL ? '_blank' : undefined}
+              rel={TRUSTPILOT_URL ? 'noopener noreferrer' : undefined}
+              aria-label="Trustpilot rating"
+            >
+              <i className="navbar__badge-icon fa-solid fa-star" style={{ color: '#00b67a' }} aria-hidden="true"></i>
+              <div className="navbar__badge-content">
+                <span className="navbar__badge-label">Trustpilot</span>
+                <div className="navbar__badge-stars" aria-label="5 star rating">
+                  <i className="fa-solid fa-star" aria-hidden="true"></i>
+                  <i className="fa-solid fa-star" aria-hidden="true"></i>
+                  <i className="fa-solid fa-star" aria-hidden="true"></i>
+                  <i className="fa-solid fa-star" aria-hidden="true"></i>
+                  <i className="fa-solid fa-star" aria-hidden="true"></i>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href={GOOGLE_REVIEWS_URL || '#!'}
+              className="navbar__badge"
+              target={GOOGLE_REVIEWS_URL ? '_blank' : undefined}
+              rel={GOOGLE_REVIEWS_URL ? 'noopener noreferrer' : undefined}
+              aria-label="Google reviews"
+            >
+              <i className="navbar__badge-icon fa-brands fa-google" style={{ color: '#4285f4' }} aria-hidden="true"></i>
+              <div className="navbar__badge-content">
+                <span className="navbar__badge-label">Google Reviews</span>
+                <div className="navbar__badge-stars navbar__badge-stars--google" aria-label="5 star rating">
+                  <i className="fa-solid fa-star" aria-hidden="true"></i>
+                  <i className="fa-solid fa-star" aria-hidden="true"></i>
+                  <i className="fa-solid fa-star" aria-hidden="true"></i>
+                  <i className="fa-solid fa-star" aria-hidden="true"></i>
+                  <i className="fa-solid fa-star" aria-hidden="true"></i>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </nav>
