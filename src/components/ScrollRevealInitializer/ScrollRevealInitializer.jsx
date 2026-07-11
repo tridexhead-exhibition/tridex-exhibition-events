@@ -16,8 +16,25 @@ function ScrollRevealInitializer() {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target); // Unobserve once animated
+            const target = entry.target;
+            target.classList.add('visible');
+            observer.unobserve(target); // Unobserve once animated
+
+            // Clean up reveal animation classes after animation completes to restore native hover lift transitions
+            setTimeout(() => {
+              target.classList.remove(
+                'reveal', 
+                'reveal-up', 
+                'reveal-down', 
+                'reveal-left', 
+                'reveal-right', 
+                'reveal-scale', 
+                'reveal-fade', 
+                'visible',
+                'delay-100', 'delay-200', 'delay-300', 'delay-400', 
+                'delay-500', 'delay-600', 'delay-700', 'delay-800'
+              );
+            }, 2000); // 2 seconds is enough for 1s transition + up to 800ms delay
           }
         });
       }, observerOptions);
