@@ -116,7 +116,7 @@ function Services() {
         {/* 1. Services Hero Section */}
         <div className="page-container">
           <div className="hero-section">
-            <div className="hero-content">
+            <div className="hero-content reveal reveal-left">
               <div className="hero-text">
                 <h1 className="hero-title">Exhibition Stall Design in India — <span className="hero-title-accent">Built to Stand Out</span></h1>
                 <p className="hero-subtitle">
@@ -132,7 +132,7 @@ function Services() {
               </div>
             </div>
             {/* Blank card placeholder replaced by Java Juice Image */}
-            <div className="hero-image-placeholder">
+            <div className="hero-image-placeholder reveal reveal-right">
               <div className="blank-image-card image-loaded">
                 <img 
                   src={whatsapp1} 
@@ -146,12 +146,12 @@ function Services() {
 
         {/* 2. Why Tridex Section */}
         <section className="why-woodpeckers">
-          <div className="section-header">
+          <div className="section-header reveal reveal-up">
             <h2 className="section-title">Why Tridex for Exhibition Stall Design &amp; Fabrication</h2>
           </div>
           
           <div className="features-grid">
-            <div className="feature-card">
+            <div className="feature-card reveal reveal-up delay-100">
               <div className="feature-icon">
                 <i className="fa-solid fa-pen-ruler" aria-hidden="true"></i>
               </div>
@@ -161,7 +161,7 @@ function Services() {
               </p>
             </div>
 
-            <div className="feature-card">
+            <div className="feature-card reveal reveal-up delay-200">
               <div className="feature-icon">
                 <i className="fa-solid fa-bolt" aria-hidden="true"></i>
               </div>
@@ -171,7 +171,7 @@ function Services() {
               </p>
             </div>
 
-            <div className="feature-card">
+            <div className="feature-card reveal reveal-up delay-300">
               <div className="feature-icon">
                 <i className="fa-solid fa-paint-roller" aria-hidden="true"></i>
               </div>
@@ -181,7 +181,7 @@ function Services() {
               </p>
             </div>
 
-            <div className="feature-card">
+            <div className="feature-card reveal reveal-up delay-400">
               <div className="feature-icon">
                 <i className="fa-solid fa-globe" aria-hidden="true"></i>
               </div>
@@ -196,11 +196,11 @@ function Services() {
         {/* 3. Stall Typologies Section (Tabs Layout) */}
         <section id="typologies" className="stall-typologies">
           <div className="typologies-container">
-            <div className="typologies-header">
+            <div className="typologies-header reveal reveal-up">
               <h2 className="typologies-title">Stall Typologies We Specialize In</h2>
             </div>
 
-            <div className="typologies-content">
+            <div className="typologies-content reveal reveal-up delay-200">
               {/* Tab Navigation */}
               <div className="typologies-nav">
                 {TYPOLOGIES.map(item => (
@@ -243,26 +243,26 @@ function Services() {
         {/* 4. Industry-Focused Stalls */}
         <section className="industry-stalls">
           <div className="industry-container">
-            <div className="industry-header">
+            <div className="industry-header reveal reveal-up">
               <h2 className="industry-title">Industry-Focused Stalls That Convert</h2>
             </div>
 
             <div className="industry-grid">
-              <div className="industry-card">
+              <div className="industry-card reveal reveal-up delay-100">
                 <h3 className="industry-card-title">Jewellery Exhibition Stall Design</h3>
                 <p className="industry-card-description">
                   High-lux showcases, secure vitrines, colour-accurate lighting, VIP lounges.
                 </p>
               </div>
 
-              <div className="industry-card">
+              <div className="industry-card reveal reveal-up delay-200">
                 <h3 className="industry-card-title">Garment Exhibition Stall Design</h3>
                 <p className="industry-card-description">
                   Racks/looks walls, quick-change trial corners, sample storage, fabric-friendly lighting.
                 </p>
               </div>
 
-              <div className="industry-card">
+              <div className="industry-card reveal reveal-up delay-300">
                 <h3 className="industry-card-title">Business Exhibition Stall Design (B2B/B2C)</h3>
                 <p className="industry-card-description">
                   Modular product bays, demo counters, meeting cabins, data capture points.
@@ -275,7 +275,7 @@ function Services() {
         {/* 5. Design Process */}
         <section className="design-process">
           <div className="process-container">
-            <div className="process-header">
+            <div className="process-header reveal reveal-up">
               <h2 className="process-title">Design Process (Fast, Clear, On-Point)</h2>
             </div>
 
@@ -321,19 +321,19 @@ function Services() {
 
         {/* 6. Simple Stall Design */}
         <section className="simple-design">
-          <div className="simple-container">
+          <div className="simple-container reveal reveal-up">
             <h2 className="simple-title">Simple Exhibition Stall Design — <span className="simple-title-accent">Without Looking Basic</span></h2>
             <p className="simple-subtitle">
               Minimal footprint, maximum clarity: One hero message, one hero product, one hero interaction.
             </p>
             <div className="simple-features">
-              <div className="simple-feature">
+              <div className="simple-feature reveal reveal-up delay-100">
                 <h3 className="simple-feature-title">Clean Design</h3>
                 <p className="simple-feature-description">
                   Clean panels, modular counters, overhead price-smart features.
                 </p>
               </div>
-              <div className="simple-feature">
+              <div className="simple-feature reveal reveal-up delay-200">
                 <h3 className="simple-feature-title">Quick Build</h3>
                 <p className="simple-feature-description">
                   Quick to build, easy to replicate across cities.
@@ -346,26 +346,26 @@ function Services() {
         {/* 7. Build Quality */}
         <section className="build-quality">
           <div className="quality-container">
-            <div className="quality-header">
+            <div className="quality-header reveal reveal-up">
               <h2 className="quality-title">Build Quality &amp; Materials</h2>
             </div>
 
             <div className="quality-grid">
-              <div className="quality-item">
+              <div className="quality-item reveal reveal-up delay-100">
                 <h3 className="quality-item-title">Engineered Structures</h3>
                 <p className="quality-item-description">
                   Engineered structures, premium laminates/veneers, solid-wood or aluminium systems
                 </p>
               </div>
 
-              <div className="quality-item">
+              <div className="quality-item reveal reveal-up delay-200">
                 <h3 className="quality-item-title">Professional Lighting</h3>
                 <p className="quality-item-description">
                   Glare-controlled, product-true lighting; reliable electrical &amp; AV
                 </p>
               </div>
 
-              <div className="quality-item">
+              <div className="quality-item reveal reveal-up delay-300">
                 <h3 className="quality-item-title">Sustainable Options</h3>
                 <p className="quality-item-description">
                   Sustainable options on request (reusable modules, recyclable prints)
@@ -378,11 +378,11 @@ function Services() {
         {/* 8. Where We Work */}
         <section className="where-we-work">
           <div className="work-container">
-            <div className="work-header">
+            <div className="work-header reveal reveal-up">
               <h2 className="work-title">Where We Work</h2>
             </div>
 
-            <div className="work-content">
+            <div className="work-content reveal reveal-up delay-200">
               <div>
                 <p className="work-description">
                   We deliver exhibition stall design in India, the UAE, and Europe, with strong execution depth 
@@ -431,11 +431,11 @@ function Services() {
         {/* 9. FAQ Section */}
         <section className="faq-section">
           <div className="faq-container">
-            <div className="faq-header">
+            <div className="faq-header reveal reveal-up">
               <h2 className="faq-title">Frequently Asked Questions (FAQs)</h2>
             </div>
 
-            <div className="faq-list">
+            <div className="faq-list reveal reveal-up delay-200">
               {FAQS.map((faq, idx) => {
                 const isOpen = activeFaq === idx;
                 return (

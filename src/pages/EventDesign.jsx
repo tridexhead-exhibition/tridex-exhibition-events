@@ -112,7 +112,7 @@ function EventDesign() {
         {/* 1. Services Hero Section */}
         <div className="page-container">
           <div className="hero-section">
-            <div className="hero-content">
+            <div className="hero-content reveal reveal-left">
               <div className="hero-text">
                 <h1 className="hero-title">Event Design &amp; <span className="hero-title-accent">Fabrication Services</span></h1>
                 <p className="hero-subtitle">
@@ -124,7 +124,7 @@ function EventDesign() {
                 </a>
               </div>
             </div>
-            <div className="hero-image-placeholder" aria-hidden="true">
+            <div className="hero-image-placeholder reveal reveal-right" aria-hidden="true">
               <div className="blank-image-card image-loaded">
                 <img 
                   src={whatsapp2} 
@@ -138,12 +138,12 @@ function EventDesign() {
 
         {/* 2. Why Tridex Section */}
         <section className="why-woodpeckers">
-          <div className="section-header">
+          <div className="section-header reveal reveal-up">
             <h2 className="section-title">Why Tridex for Event Production &amp; Fabrications</h2>
           </div>
           
           <div className="features-grid">
-            <div className="feature-card">
+            <div className="feature-card reveal reveal-up delay-100">
               <div className="feature-icon">
                 <i className="fa-solid fa-pen-ruler" aria-hidden="true"></i>
               </div>
@@ -153,7 +153,7 @@ function EventDesign() {
               </p>
             </div>
 
-            <div className="feature-card">
+            <div className="feature-card reveal reveal-up delay-200">
               <div className="feature-icon">
                 <i className="fa-solid fa-bolt" aria-hidden="true"></i>
               </div>
@@ -163,7 +163,7 @@ function EventDesign() {
               </p>
             </div>
 
-            <div className="feature-card">
+            <div className="feature-card reveal reveal-up delay-300">
               <div className="feature-icon">
                 <i className="fa-solid fa-swatchbook" aria-hidden="true"></i>
               </div>
@@ -173,7 +173,7 @@ function EventDesign() {
               </p>
             </div>
 
-            <div className="feature-card">
+            <div className="feature-card reveal reveal-up delay-400">
               <div className="feature-icon">
                 <i className="fa-solid fa-globe" aria-hidden="true"></i>
               </div>
@@ -188,11 +188,11 @@ function EventDesign() {
         {/* 3. Stall Typologies Section (Tabs Layout) */}
         <section id="typologies" className="stall-typologies">
           <div className="typologies-container">
-            <div className="typologies-header">
+            <div className="typologies-header reveal reveal-up">
               <h2 className="typologies-title">Event Design Typologies</h2>
             </div>
 
-            <div className="typologies-content">
+            <div className="typologies-content reveal reveal-up delay-200">
               {/* Tab Navigation */}
               <div className="typologies-nav">
                 {TYPOLOGIES.map(item => (
@@ -235,26 +235,26 @@ function EventDesign() {
         {/* 4. Industry-Focused Stalls */}
         <section className="industry-stalls">
           <div className="industry-container">
-            <div className="industry-header">
+            <div className="industry-header reveal reveal-up">
               <h2 className="industry-title">Experiential Event Environments</h2>
             </div>
 
             <div className="industry-grid">
-              <div className="industry-card">
+              <div className="industry-card reveal reveal-up delay-100">
                 <h3 className="industry-card-title">Corporate Conferences</h3>
                 <p className="industry-card-description">
                   Professional stages, podiums, registration zones, digital LED screens, and VIP networking lounges.
                 </p>
               </div>
 
-              <div className="industry-card">
+              <div className="industry-card reveal reveal-up delay-200">
                 <h3 className="industry-card-title">Experiential Pop-ups</h3>
                 <p className="industry-card-description">
                   Immersive mall setups, high-footfall activations, interactive display booths, and photogenic backdrops.
                 </p>
               </div>
 
-              <div className="industry-card">
+              <div className="industry-card reveal reveal-up delay-300">
                 <h3 className="industry-card-title">Product Launches &amp; Media Events</h3>
                 <p className="industry-card-description">
                   High-lux reveals, VIP seating layouts, custom lighting systems, media walls, and press registration zones.
@@ -267,7 +267,7 @@ function EventDesign() {
         {/* 5. Design Process */}
         <section className="design-process">
           <div className="process-container">
-            <div className="process-header">
+            <div className="process-header reveal reveal-up">
               <h2 className="process-title">Event Production Process</h2>
             </div>
 
@@ -313,19 +313,19 @@ function EventDesign() {
 
         {/* 6. Simple Stall Design */}
         <section className="simple-design">
-          <div className="simple-container">
+          <div className="simple-container reveal reveal-up">
             <h2 className="simple-title">Bespoke Event Fabrications — <span className="simple-title-accent">Without Looking Cluttered</span></h2>
             <p className="simple-subtitle">
               Sleek stages, striking focal points: Clean lines, premium materials, and perfect lighting integrations.
             </p>
             <div className="simple-features">
-              <div className="simple-feature">
+              <div className="simple-feature reveal reveal-up delay-100">
                 <h3 className="simple-feature-title">Clean Stage Layouts</h3>
                 <p className="simple-feature-description">
                   Seamless Tension Fabric backdrops, concealed wiring, and integrated LED displays.
                 </p>
               </div>
-              <div className="simple-feature">
+              <div className="simple-feature reveal reveal-up delay-200">
                 <h3 className="simple-feature-title">Modular Archways</h3>
                 <p className="simple-feature-description">
                   Fast setup entrance structures and signage towers for clean attendee direction.
@@ -338,26 +338,26 @@ function EventDesign() {
         {/* 7. Build Quality */}
         <section className="build-quality">
           <div className="quality-container">
-            <div className="quality-header">
+            <div className="quality-header reveal reveal-up">
               <h2 className="quality-title">Build Quality &amp; Materials</h2>
             </div>
 
             <div className="quality-grid">
-              <div className="quality-item">
+              <div className="quality-item reveal reveal-up delay-100">
                 <h3 className="quality-item-title">Premium Stages</h3>
                 <p className="quality-item-description">
                   Double-layered wooden stage bases, seamless carpets, and heavy-duty stage backdrops.
                 </p>
               </div>
 
-              <div className="quality-item">
+              <div className="quality-item reveal reveal-up delay-200">
                 <h3 className="quality-item-title">AV &amp; LED Integration</h3>
                 <p className="quality-item-description">
                   High-definition LED screens, directional audio systems, and color-balanced lighting.
                 </p>
               </div>
 
-              <div className="quality-item">
+              <div className="quality-item reveal reveal-up delay-300">
                 <h3 className="quality-item-title">Sustainable Builds</h3>
                 <p className="quality-item-description">
                   Reusable modular framework, water-based paints, and recyclable fabric prints.
@@ -370,11 +370,11 @@ function EventDesign() {
         {/* 8. Where We Work */}
         <section className="where-we-work">
           <div className="work-container">
-            <div className="work-header">
+            <div className="work-header reveal reveal-up">
               <h2 className="work-title">Where We Work</h2>
             </div>
 
-            <div className="work-content">
+            <div className="work-content reveal reveal-up delay-200">
               <div>
                 <p className="work-description">
                   We deliver exhibition stall design in India, the UAE, and Europe, with strong execution depth 
@@ -423,11 +423,11 @@ function EventDesign() {
         {/* 9. FAQ Section */}
         <section className="faq-section">
           <div className="faq-container">
-            <div className="faq-header">
+            <div className="faq-header reveal reveal-up">
               <h2 className="faq-title">Frequently Asked Questions (FAQs)</h2>
             </div>
 
-            <div className="faq-list">
+            <div className="faq-list reveal reveal-up delay-200">
               {FAQS.map((faq, idx) => {
                 const isOpen = activeFaq === idx;
                 return (

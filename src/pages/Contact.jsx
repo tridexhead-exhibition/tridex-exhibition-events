@@ -521,7 +521,7 @@ function Contact() {
         {/* 3. Our Offices Section */}
         <section className="contact-offices-section">
           <div className="contact-offices-inner">
-            <div className="contact-offices-header">
+            <div className="contact-offices-header reveal reveal-up">
               <h2 className="contact-offices-title">
                 Our <span className="contact-offices-title-accent">Offices</span>
               </h2>
@@ -531,7 +531,7 @@ function Contact() {
             <div className="contact-offices-grid">
               
               {/* Card 1: Office North Delhi */}
-              <article className="contact-office-card contact-office-card-primary">
+              <article className="contact-office-card contact-office-card-primary reveal reveal-up delay-100">
                 <header className="contact-office-card-header">
                   <div className="contact-office-pill">Corporate HQ</div>
                   <div className="contact-office-title-row">
@@ -577,7 +577,7 @@ function Contact() {
               </article>
  
               {/* Card 2: Manufacturing Unit */}
-              <article className="contact-office-card">
+              <article className="contact-office-card reveal reveal-up delay-200">
                 <header className="contact-office-card-header">
                   <div className="contact-office-pill">Production Hub</div>
                   <div className="contact-office-title-row">
