@@ -117,7 +117,9 @@ function StandDesign() {
                 <h1 className="hero-title">Exhibition Stand <span className="hero-title-accent">Design &amp; Construction</span></h1>
                 <p className="hero-subtitle">
                   We design and construct premium custom exhibition stands globally. 
-                  We combine cutting-edge 3D stand concepts with reliable, turnkey engineering and fabrication.
+                  We combine cutting-edge 3D stand concepts with reliable, turnkey engineering and fabrication. 
+                  Whether you need a double-decker pavilion, a modern island layout, or custom modular displays, 
+                  we deliver high-impact custom exhibition stands that showcase your brand and products on any expo floor.
                 </p>
                 <a href="#typologies" className="cta-button">
                   Explore Typologies

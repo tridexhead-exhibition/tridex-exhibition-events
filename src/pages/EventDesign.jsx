@@ -117,7 +117,9 @@ function EventDesign() {
                 <h1 className="hero-title">Event Design &amp; <span className="hero-title-accent">Fabrication Services</span></h1>
                 <p className="hero-subtitle">
                   We design and construct immersive brand environments, stage backdrops, corporate summits, 
-                  and experiential pop-ups. From initial 3D visualization to turnkey onsite setup, we make your events stand out.
+                  and experiential pop-ups. From initial 3D visualization to turnkey onsite setup, we make your events stand out. 
+                  Whether you need a high-lux stage reveal, custom branding backdrops, or premium VIP activation lounges, 
+                  we deliver flawless execution and quality fabrications that captivate your audience.
                 </p>
                 <a href="#typologies" className="cta-button">
                   Explore Typologies

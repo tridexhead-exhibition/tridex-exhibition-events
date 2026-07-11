@@ -117,7 +117,9 @@ function BoothDesign() {
                 <h1 className="hero-title">Exhibition Booth <span className="hero-title-accent">Design &amp; Setup</span></h1>
                 <p className="hero-subtitle">
                   We design and construct premium custom exhibition booths that stand out, engage visitors, 
-                  and drive lead capture. Backed by in-house fabrication and experienced construction crews.
+                  and drive lead capture. Backed by in-house fabrication and experienced construction crews. 
+                  From custom 3D layouts and spatial planning to high-quality carpentry, professional lighting integrations, 
+                  and turnkey setup, we build custom exhibition spaces that deliver maximum brand impact.
                 </p>
                 <a href="#typologies" className="cta-button">
                   Explore Typologies

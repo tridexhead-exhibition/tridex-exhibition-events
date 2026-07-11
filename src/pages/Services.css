@@ -23,7 +23,7 @@
   display: flex;
   align-items: center; /* Center items vertically */
   max-height: 80vh;
-  min-height: 440px;
+  min-height: 380px; /* Reduced to 380px to make the card more compact */
   background: linear-gradient(135deg, #091a24 0%, #152439 100%); /* Tridex Dark Navy Gradient */
   position: relative;
   overflow: hidden;
@@ -39,7 +39,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px;
+  padding: 30px 45px; /* Reduced vertical padding to decrease blank space around text */
   color: var(--color-white);
   position: relative;
   z-index: 2;
@@ -109,7 +109,7 @@
 /* Blank card placeholder instead of Hero image */
 .hero-image-placeholder {
   flex: 1; /* Reduced from 1.2 to make image more compact */
-  padding: 25px; /* Reduced from 40px for a cleaner framed look */
+  padding: 20px; /* Reduced to 20px to fit the new compact card height cleanly */
   background-color: rgba(255, 255, 255, 0.05);
   display: flex;
   align-items: center;
