@@ -21,9 +21,8 @@
 
 .hero-section {
   display: flex;
-  align-items: center; /* Center items vertically */
   max-height: 80vh;
-  min-height: 380px; /* Reduced to 380px to make the card more compact */
+  height: 420px; /* Fixed height on desktop to guarantee equal card sizes across all pages */
   background: linear-gradient(135deg, #091a24 0%, #152439 100%); /* Tridex Dark Navy Gradient */
   position: relative;
   overflow: hidden;
@@ -1157,6 +1156,7 @@
   .hero-section {
     flex-direction: column;
     max-height: none;
+    height: auto; /* Reset desktop fixed height */
   }
 
   .hero-content {
@@ -1265,6 +1265,7 @@
     border-radius: 12px;
     flex-direction: column;
     max-height: none;
+    height: auto; /* Reset desktop fixed height */
     min-height: auto; /* Reset desktop min-height */
   }
 
