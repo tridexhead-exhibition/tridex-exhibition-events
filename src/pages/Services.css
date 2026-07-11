@@ -21,12 +21,13 @@
 
 .hero-section {
   display: flex;
+  align-items: center; /* Center items vertically */
   max-height: 80vh;
-  min-height: 520px;
+  min-height: 440px;
   background: linear-gradient(135deg, #091a24 0%, #152439 100%); /* Tridex Dark Navy Gradient */
   position: relative;
   overflow: hidden;
-  margin: 40px auto;
+  margin: 30px auto;
   border-radius: 20px;
   box-shadow: var(--shadow-xl);
   max-width: 1400px;
@@ -34,11 +35,11 @@
 }
 
 .hero-content {
-  flex: 1;
+  flex: 1.2; /* Give slightly more width to text to reduce vertical stacking */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 50px;
+  padding: 40px;
   color: var(--color-white);
   position: relative;
   z-index: 2;
@@ -49,11 +50,11 @@
 }
 
 .hero-title {
-  font-size: 2.8rem;
+  font-size: 2.3rem; /* Reduced from 2.8rem for cleaner look */
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.25;
   color: var(--color-white);
-  margin-bottom: 25px;
+  margin-bottom: 18px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -63,21 +64,21 @@
 }
 
 .hero-subtitle {
-  font-size: 1.0rem;
+  font-size: 0.95rem; /* Slightly smaller text */
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: 24px; /* Reduced margin */
   color: rgba(255, 255, 255, 0.8);
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 .cta-button {
   display: inline-block;
-  padding: 16px 32px;
+  padding: 14px 28px; /* Tighter button padding */
   background: linear-gradient(90deg, #e53935 0%, #b82d2f 50%, #7d1c27 100%);
   border: 2px solid #b82d2f;
   color: var(--color-white);
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -107,8 +108,8 @@
 
 /* Blank card placeholder instead of Hero image */
 .hero-image-placeholder {
-  flex: 1.2;
-  padding: 40px;
+  flex: 1; /* Reduced from 1.2 to make image more compact */
+  padding: 25px; /* Reduced from 40px for a cleaner framed look */
   background-color: rgba(255, 255, 255, 0.05);
   display: flex;
   align-items: center;
