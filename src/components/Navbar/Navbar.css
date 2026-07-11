@@ -277,7 +277,17 @@
 
 @media (max-width: 992px) {
   .navbar__badges {
-    display: none;
+    display: flex; /* Keep visible on tablet screens */
+    gap: 10px;      /* Tighter gap */
+  }
+
+  .navbar__badge {
+    padding: 6px 12px; /* Tighter padding */
+    gap: 6px;
+  }
+
+  .navbar__badge-stars {
+    display: none !important; /* Hide stars to save space */
   }
 
   .navbar__top {
@@ -291,6 +301,37 @@
 }
 
 @media (max-width: 768px) {
+  .navbar__badges {
+    display: flex !important; /* Keep visible on mobile screens */
+    gap: 6px;                 /* Compact gap for small screens */
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;           /* Breathing room between logo and hamburger */
+  }
+
+  .navbar__badge {
+    padding: 4px 8px !important; /* Compact padding */
+    gap: 4px !important;
+    border-radius: 6px !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+  }
+
+  .navbar__badge-icon {
+    font-size: 0.95rem !important; /* Smaller icon */
+  }
+
+  .navbar__badge-label {
+    font-size: 0.65rem !important; /* Smaller label text */
+  }
+
+  .navbar__badge-label-extra {
+    display: none !important; /* Hide the word 'Reviews' to make Google badge compact */
+  }
+
+  .navbar__badge-stars {
+    display: none !important; /* Hide stars */
+  }
+
   .navbar__top {
     padding: 12px 16px;
   }

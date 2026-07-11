@@ -83,7 +83,7 @@ function Navbar() {
           >
             <i className="navbar__badge-icon fa-brands fa-google" style={{ color: '#4285f4' }} aria-hidden="true"></i>
             <div className="navbar__badge-content">
-              <span className="navbar__badge-label">Google Reviews</span>
+              <span className="navbar__badge-label">Google <span className="navbar__badge-label-extra">Reviews</span></span>
               <div className="navbar__badge-stars navbar__badge-stars--google" aria-label="5 star rating">
                 <i className="fa-solid fa-star" aria-hidden="true"></i>
                 <i className="fa-solid fa-star" aria-hidden="true"></i>
