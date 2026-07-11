@@ -148,7 +148,7 @@ function PortfolioGrid() {
     <section className="portfolio-grid-section" aria-label="Our Work">
       <div className="container container--wide portfolio-grid-container">
         {/* Header */}
-        <div className="portfolio-grid-header">
+        <div className="portfolio-grid-header reveal reveal-up">
           <span className="portfolio-grid-subtitle">Our Work</span>
           <h2 className="portfolio-grid-title">
             Our Global Exhibition Booth Design Work <span className="portfolio-grid-accent">Across Industries</span>
@@ -158,7 +158,7 @@ function PortfolioGrid() {
         {/* 4-Column Grid */}
         <div className="portfolio-grid-layout">
           {PORTFOLIO_ITEMS.map((item, idx) => (
-            <div className="portfolio-card" key={`${item.title}-${idx}`}>
+            <div className={`portfolio-card reveal reveal-up delay-${(idx % 4 + 1) * 100}`} key={`${item.title}-${idx}`}>
               <div className="portfolio-card__image-wrapper">
                 <img
                   src={item.image}

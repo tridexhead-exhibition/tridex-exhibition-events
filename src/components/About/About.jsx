@@ -7,7 +7,7 @@ function About() {
       <div className="container container--wide about-container">
         <div className="about-grid">
           {/* Left Column — Text */}
-          <div className="about-content">
+          <div className="about-content reveal reveal-up">
             <h2 className="about-title">
               India’s Leading Exhibition &amp; Event Fabricators &amp; Design Company
             </h2>
@@ -24,7 +24,7 @@ function About() {
           </div>
 
           {/* Right Column — Image Card (Wider & Responsive) */}
-          <div className="about-image-card">
+          <div className="about-image-card reveal reveal-up delay-200">
             <img 
               src={aboutImage} 
               alt="Exhibition Booth Design Rendering" 

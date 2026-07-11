@@ -6,7 +6,7 @@ function PortfolioCTA() {
     <section className="portfolio-cta-section" aria-label="Book a Proposal">
       <div className="portfolio-cta-bg-glow" aria-hidden="true"></div>
       
-      <div className="container portfolio-cta-container">
+      <div className="container portfolio-cta-container reveal reveal-up">
         <span className="portfolio-cta-subtitle">Elevate Your Presence</span>
         <h2 className="portfolio-cta-title">
           Ready to Build an <span className="portfolio-cta-accent">Award-Winning</span> Exhibition Stall?

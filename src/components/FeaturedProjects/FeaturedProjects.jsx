@@ -28,7 +28,7 @@ function FeaturedProjects() {
       <div className="container container--wide featured-projects-container">
         
         {/* Header */}
-        <div className="featured-projects-header">
+        <div className="featured-projects-header reveal reveal-up">
           <span className="featured-projects-subtitle">Portfolio Highlights</span>
           <h2 className="featured-projects-title">
             Featured Exhibition <span className="featured-projects-accent">Design Projects</span>
@@ -42,7 +42,7 @@ function FeaturedProjects() {
         {/* 3-Column Grid */}
         <div className="featured-projects-grid">
           {FEATURED_ITEMS.map((item, idx) => (
-            <div className="featured-project-card" key={idx}>
+            <div className={`featured-project-card reveal reveal-up delay-${(idx + 1) * 200}`} key={idx}>
               <div className="featured-project-card__image-wrapper">
                 <img
                   src={item.image}

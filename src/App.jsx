@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import WaveBackground from './components/WaveBackground/WaveBackground';
+import ScrollRevealInitializer from './components/ScrollRevealInitializer/ScrollRevealInitializer';
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
 import Services from './pages/Services';
@@ -19,6 +20,7 @@ function App() {
     <BrowserRouter>
       <ScrollToTop />
       <WaveBackground />
+      <ScrollRevealInitializer />
       <Routes>
         <Route path="/" element={<Home />} />
         {/* Pages routes */}

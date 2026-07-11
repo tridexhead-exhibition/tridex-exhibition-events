@@ -61,7 +61,7 @@ function Stats() {
       <div className="container">
         <div className="stats-row">
           {/* Stat 1 */}
-          <div className="stat-card">
+          <div className="stat-card reveal reveal-up">
             <div className="stat-card__icon-wrapper">
               <i className="fa-solid fa-clipboard-check" aria-hidden="true"></i>
             </div>
@@ -70,7 +70,7 @@ function Stats() {
           </div>
 
           {/* Stat 2 */}
-          <div className="stat-card">
+          <div className="stat-card reveal reveal-up delay-200">
             <div className="stat-card__icon-wrapper">
               <i className="fa-solid fa-face-smile-beam" aria-hidden="true"></i>
             </div>
@@ -79,7 +79,7 @@ function Stats() {
           </div>
 
           {/* Stat 3 */}
-          <div className="stat-card">
+          <div className="stat-card reveal reveal-up delay-400">
             <div className="stat-card__icon-wrapper">
               <i className="fa-solid fa-calendar-days" aria-hidden="true"></i>
             </div>

@@ -38,7 +38,7 @@ function Process() {
     <section className="process-section" aria-label="Our Process">
       <div className="container">
         {/* Section Header */}
-        <div className="process-header">
+        <div className="process-header reveal reveal-up">
           <h2 className="process-header-title">
             How We <span className="process-header-accent">Work</span>
           </h2>
@@ -50,7 +50,7 @@ function Process() {
         {/* Process Cards Grid */}
         <div className="process-grid">
           {PROCESS_STEPS.map((step, idx) => (
-            <div className="process-card" key={idx}>
+            <div className={`process-card reveal reveal-up delay-${(idx + 1) * 100}`} key={idx}>
               <div className="process-card__icon-wrapper">
                 <i className={step.icon} aria-hidden="true"></i>
               </div>

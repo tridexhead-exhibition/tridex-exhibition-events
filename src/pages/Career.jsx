@@ -346,7 +346,7 @@ function Career() {
         
         {/* 1. Split Hero Section */}
         <section className="career-hero" aria-label="Join our team">
-          <div className="career-hero__content">
+          <div className="career-hero__content reveal reveal-up">
             <span className="career-hero__label">Careers at Tridex</span>
             <h1 className="career-hero__heading">
               Shape the Future of <span className="career-hero__accent">Exhibition spaces</span>
@@ -357,7 +357,7 @@ function Career() {
               of exhibition booth fabrication and 3D architectural craft.
             </p>
           </div>
-          <div className="career-hero__image-wrapper">
+          <div className="career-hero__image-wrapper reveal reveal-up delay-200">
             <img 
               src={careerHero} 
               alt="Tridex Exhibition Design Studio" 
@@ -370,7 +370,7 @@ function Career() {
         <section className="culture-section">
           <div className="culture-container">
             <div className="culture-grid">
-              <div className="culture-card">
+              <div className="culture-card reveal reveal-up">
                 <div className="culture-icon">
                   <i className="fa-solid fa-paintbrush" aria-hidden="true"></i>
                 </div>
@@ -378,7 +378,7 @@ function Career() {
                 <p className="culture-card-desc">We create the best working environment for our Team</p>
               </div>
 
-              <div className="culture-card">
+              <div className="culture-card reveal reveal-up delay-200">
                 <div className="culture-icon">
                   <i className="fa-solid fa-graduation-cap" aria-hidden="true"></i>
                 </div>
@@ -386,7 +386,7 @@ function Career() {
                 <p className="culture-card-desc">Constant Communication &amp; Skill Development</p>
               </div>
 
-              <div className="culture-card">
+              <div className="culture-card reveal reveal-up delay-400">
                 <div className="culture-icon">
                   <i className="fa-solid fa-trophy" aria-hidden="true"></i>
                 </div>
@@ -400,14 +400,14 @@ function Career() {
         {/* 2. Current Openings Section */}
         <section className="openings-section">
           <div className="openings-container">
-            <div className="openings-header">
+            <div className="openings-header reveal reveal-up">
               <h2 className="openings-title">Current Openings</h2>
               <p className="openings-subtitle">Work with us in North Delhi and build projects that command attention.</p>
             </div>
 
             <div className="openings-grid">
-              {OPENINGS.map((job) => (
-                <div key={job.id} className="job-card">
+              {OPENINGS.map((job, idx) => (
+                <div key={job.id} className={`job-card reveal reveal-up delay-${(idx + 1) * 200}`}>
                   <div className="job-card__header">
                     <h3 className="job-card__title">{job.title}</h3>
                     <div className="job-card__meta">
@@ -436,7 +436,7 @@ function Career() {
             </div>
 
             {/* Bottom note for experienced professionals */}
-            <div className="openings-footer-note">
+            <div className="openings-footer-note reveal reveal-up">
                <i className="fa-solid fa-circle-info" aria-hidden="true"></i>
               <p>
                 Any experienced professional is welcome to apply. Even if your profile does not match our exact 
@@ -449,12 +449,12 @@ function Career() {
         {/* 3. Drop Your CV Form */}
         <section id="apply-form" className="apply-section">
           <div className="apply-container">
-            <div className="apply-header">
+            <div className="apply-header reveal reveal-up">
               <h2 className="apply-title">Drop Your CV</h2>
               <p className="apply-subtitle">Fill out the secure application form below and attach your CV.</p>
             </div>
 
-            <div className="apply-card">
+            <div className="apply-card reveal reveal-up delay-200">
               <form onSubmit={handleSubmit} className="apply-form" noValidate>
                 {/* Honeypot field for bot protection */}
                 <div style={{ display: 'none' }} aria-hidden="true">

@@ -241,7 +241,7 @@ function Contact() {
             <div className="modular-hero-content">
               
               {/* Left Column */}
-              <div className="modular-hero-left">
+              <div className="modular-hero-left reveal reveal-left">
                 <div className="years-of-excellence-wrapper">
                   <span className="years-of-excellence-icon">
                     <i className="fa-solid fa-trophy" aria-hidden="true"></i>
@@ -285,7 +285,7 @@ function Contact() {
               </div>
 
               {/* Right Column */}
-              <div className="modular-hero-right">
+              <div className="modular-hero-right reveal reveal-right">
                 <img 
                   src={contactHero} 
                   alt="Tridex Exhibition Head Office" 
@@ -303,7 +303,7 @@ function Contact() {
             <div className="contact-touch-grid">
               
               {/* Left: Get In Touch Cards */}
-              <div className="contact-touch-left">
+              <div className="contact-touch-left reveal reveal-left">
                 <h2 className="contact-touch-title">
                   Get In <span>Touch</span>
                 </h2>
@@ -375,7 +375,7 @@ function Contact() {
               </div>
 
               {/* Right: Get Free Quote Form Box */}
-              <div className="contact-touch-right" id="get-free-quote">
+              <div className="contact-touch-right reveal reveal-right" id="get-free-quote">
                 <div className="contact-quote-card">
                   <div className="contact-quote-card-header">
                     <div className="contact-quote-icon-badge">
