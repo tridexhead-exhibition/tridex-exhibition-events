@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import FloatingContact from '../components/FloatingContact/FloatingContact';
 import contactHero from '../assets/images/contact_hero.png';
+import { isValidEmail, isValidPhone, sanitizeInput, checkRateLimit, recordSubmission } from '../utils/validation';
 import './Contact.css';
 
 const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE"; // Replace with your Web3Forms access key (Get one for free at web3forms.com)
@@ -24,18 +25,6 @@ function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [submittedDetails, setSubmittedDetails] = useState(null);
-
-  const recordSubmission = (emailVal, phoneVal) => {
-    try {
-      const history = JSON.parse(localStorage.getItem('tridex_submission_history') || '[]');
-      history.push({
-        email: emailVal.trim(),
-        phone: phoneVal.trim(),
-        timestamp: Date.now()
-      });
-      localStorage.setItem('tridex_submission_history', JSON.stringify(history));
-    } catch (e) {}
-  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -86,50 +75,33 @@ function Contact() {
     }
 
     // 3. Strict Email validation
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emailRegex.test(email.trim())) {
+    if (!isValidEmail(email)) {
       setError('Please enter a valid email address.');
       return;
     }
 
     // 4. Strict Indian mobile number format validation
-    const phoneRegex = /^[6-9]\d{9}$/;
-    if (!phoneRegex.test(phone.trim())) {
+    if (!isValidPhone(phone)) {
       setError('Please enter a valid 10-digit mobile number starting with 6, 7, 8, or 9.');
       return;
     }
 
     // 5. Rate Limiting (Max 1 submission per 10 minutes for same email or phone)
-    const now = Date.now();
-    const submissionsKey = 'tridex_submission_history';
-    let history = [];
-    try {
-      history = JSON.parse(localStorage.getItem(submissionsKey) || '[]');
-    } catch (e) {}
-
-    // Clean up entries older than 10 minutes (600,000 ms)
-    history = history.filter(item => now - item.timestamp < 600000);
-
-    const duplicate = history.find(item => 
-      item.email.toLowerCase() === email.trim().toLowerCase() || item.phone.trim() === phone.trim()
-    );
-
-    if (duplicate) {
-      const waitTimeMinutes = Math.ceil((600000 - (now - duplicate.timestamp)) / 60000);
-      setError(`For security, you can only submit one request every 10 minutes. Please wait ${waitTimeMinutes} minute(s) before submitting again.`);
+    const waitTime = checkRateLimit(email, phone);
+    if (waitTime > 0) {
+      setError(`For security, you can only submit one request every 10 minutes. Please wait ${waitTime} minute(s) before submitting again.`);
       return;
     }
 
     // 6. XSS Hacker Protection - Sanitise inputs
-    const sanitize = (str) => str.replace(/<[^>]*>/g, '').trim();
     const sanitizedData = {
-      companyName: sanitize(companyName),
-      yourName: sanitize(yourName),
-      email: sanitize(email),
-      phone: sanitize(phone),
-      city: sanitize(formData.city),
-      showName: sanitize(formData.showName),
-      message: sanitize(message)
+      companyName: sanitizeInput(companyName),
+      yourName: sanitizeInput(yourName),
+      email: email.trim(),
+      phone: phone.trim(),
+      city: sanitizeInput(formData.city),
+      showName: sanitizeInput(formData.showName),
+      message: sanitizeInput(message)
     };
 
     setIsSubmitting(true);

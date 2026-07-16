@@ -1,0 +1,214 @@
+/* ============================================
+   REVIEWS SECTION STYLES
+   ============================================ */
+
+.reviews-section {
+  padding: var(--space-4xl) 0;
+  background-color: var(--color-light-bg);
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background decorative circles */
+.reviews-section::before,
+.reviews-section::after {
+  content: '';
+  position: absolute;
+  border-radius: var(--border-radius-full);
+  background: radial-gradient(circle, rgba(229, 57, 53, 0.03) 0%, rgba(229, 57, 53, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.reviews-section::before {
+  width: 400px;
+  height: 400px;
+  top: -100px;
+  right: -100px;
+}
+
+.reviews-section::after {
+  width: 500px;
+  height: 500px;
+  bottom: -200px;
+  left: -200px;
+}
+
+.reviews-header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  position: relative;
+  z-index: 2;
+}
+
+.reviews-header-title {
+  font-size: 2.25rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-primary);
+  line-height: var(--lh-tight);
+}
+
+.reviews-header-accent {
+  background-image: linear-gradient(90deg, #e53935 0%, #b82d2f 50%, #7d1c27 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.reviews-header-desc {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-regular);
+  color: var(--color-text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Reviews Grid */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  position: relative;
+  z-index: 2;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--color-white);
+  border: 1px solid rgba(229, 57, 53, 0.1);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-xl);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+  height: 100%;
+}
+
+.review-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-cta-red);
+  box-shadow: 0 12px 30px rgba(229, 57, 53, 0.08);
+}
+
+/* Top Card Section: Badges & Stars */
+.review-card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-md);
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+/* Expo Pill Badge */
+.review-card__badge {
+  font-size: 0.72rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-cta-red);
+  background-color: rgba(229, 57, 53, 0.08);
+  padding: 4px 10px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Star Rating */
+.review-card__stars {
+  display: flex;
+  gap: 2px;
+  color: #ffb300; /* Amber yellow stars */
+  font-size: 0.85rem;
+}
+
+.review-card__stars .fa-regular {
+  opacity: 0.3;
+}
+
+/* Review content */
+.review-card__quote-icon {
+  color: rgba(229, 57, 53, 0.15);
+  font-size: 1.8rem;
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+}
+
+.review-card__text {
+  font-size: 0.9rem;
+  font-weight: var(--fw-regular);
+  color: var(--color-text-light);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-lg);
+  flex-grow: 1;
+  font-style: italic;
+}
+
+/* Bottom Card Section: Author Details */
+.review-card__author {
+  border-top: 1px solid #f0f0f0;
+  padding-top: var(--space-md);
+  margin-top: auto;
+}
+
+.review-card__name {
+  font-size: 0.95rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-primary);
+  margin-bottom: 2px;
+}
+
+.review-card__role {
+  font-size: 0.78rem;
+  font-weight: var(--fw-medium);
+  color: var(--color-text-light);
+}
+
+.review-card__company {
+  font-weight: var(--fw-semibold);
+  color: var(--color-cta-red);
+}
+
+/* ============================================
+   RESPONSIVE — REVIEWS
+   ============================================ */
+
+@media (max-width: 992px) {
+  .reviews-section {
+    padding: var(--space-3xl) 0;
+  }
+
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews-header-title {
+    font-size: 1.75rem;
+  }
+
+  .reviews-header-desc {
+    font-size: var(--fs-base);
+  }
+}
+
+@media (max-width: 576px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .review-card {
+    padding: var(--space-md);
+  }
+
+  .review-card__text {
+    font-size: 0.85rem;
+    margin-bottom: var(--space-md);
+  }
+}

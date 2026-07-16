@@ -15,6 +15,13 @@ const NAV_ITEMS = [
   { label: 'Contact', path: '/contact' },
 ];
 
+const SERVICE_SUB_ITEMS = [
+  { label: 'EXHIBITION STALL DESIGN', path: '/services' },
+  { label: 'EVENT DESIGN & FABRICATIONS', path: '/event-design' },
+  { label: 'EXHIBITION BOOTH DESIGN', path: '/booth-design' },
+  { label: 'EXHIBITION STAND DESIGN', path: '/stand-design' },
+];
+
 function Navbar() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
@@ -135,10 +142,13 @@ function Navbar() {
                     {item.label} <i className="fa-solid fa-chevron-down navbar__dropdown-chevron" aria-hidden="true"></i>
                   </Link>
                   <ul className="navbar__dropdown-menu">
-                    <li><Link to="/services" className="navbar__dropdown-link">EXHIBITION STALL DESIGN</Link></li>
-                    <li><Link to="/event-design" className="navbar__dropdown-link">EVENT DESIGN &amp; FABRICATIONS</Link></li>
-                    <li><Link to="/booth-design" className="navbar__dropdown-link">EXHIBITION BOOTH DESIGN</Link></li>
-                    <li><Link to="/stand-design" className="navbar__dropdown-link">EXHIBITION STAND DESIGN</Link></li>
+                    {SERVICE_SUB_ITEMS.map((subItem) => (
+                      <li key={subItem.path}>
+                        <Link to={subItem.path} className="navbar__dropdown-link">
+                          {subItem.label}
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 </li>
               );
@@ -191,26 +201,13 @@ function Navbar() {
                       </button>
                     </div>
                     <ul className={`navbar__mobile-dropdown-menu${isMobileServicesOpen ? ' navbar__mobile-dropdown-menu--open' : ''}`}>
-                      <li>
-                        <Link to="/services" className="navbar__mobile-dropdown-link" onClick={closeMobile}>
-                          EXHIBITION STALL DESIGN
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/event-design" className="navbar__mobile-dropdown-link" onClick={closeMobile}>
-                          EVENT DESIGN &amp; FABRICATIONS
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/booth-design" className="navbar__mobile-dropdown-link" onClick={closeMobile}>
-                          EXHIBITION BOOTH DESIGN
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/stand-design" className="navbar__mobile-dropdown-link" onClick={closeMobile}>
-                          EXHIBITION STAND DESIGN
-                        </Link>
-                      </li>
+                      {SERVICE_SUB_ITEMS.map((subItem) => (
+                        <li key={subItem.path}>
+                          <Link to={subItem.path} className="navbar__mobile-dropdown-link" onClick={closeMobile}>
+                            {subItem.label}
+                          </Link>
+                        </li>
+                      ))}
                     </ul>
                   </li>
                 );

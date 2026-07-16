@@ -2,6 +2,13 @@ import { Link } from 'react-router-dom';
 import './Footer.css';
 import footerLogo from '../../assets/images/logo-footer.png';
 
+const FOOTER_SERVICES = [
+  { label: 'Exhibition Stall Design', path: '/services' },
+  { label: 'Event Design & Fabrications', path: '/event-design' },
+  { label: 'Exhibition Booth Design', path: '/booth-design' },
+  { label: 'Exhibition Stand Design', path: '/stand-design' },
+];
+
 function Footer() {
   return (
     <footer className="footer" role="contentinfo" aria-label="Site Footer">
@@ -51,14 +58,14 @@ function Footer() {
               </ul>
             </div>
 
-            {/* Column 3 — Services */}
             <div className="footer__col">
               <h3 className="footer__title">Our Services</h3>
               <ul className="footer__links">
-                <li><Link to="/services">Exhibition Stall Design</Link></li>
-                <li><Link to="/event-design">Event Design &amp; Fabrications</Link></li>
-                <li><Link to="/booth-design">Exhibition Booth Design</Link></li>
-                <li><Link to="/stand-design">Exhibition Stand Design</Link></li>
+                {FOOTER_SERVICES.map((service) => (
+                  <li key={service.path}>
+                    <Link to={service.path}>{service.label}</Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
