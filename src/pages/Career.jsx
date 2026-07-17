@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import FloatingContact from '../components/FloatingContact/FloatingContact';
-import careerHero from '../assets/images/career_hero.png';
+import careerHero from '../assets/images/career_hero.webp';
 import { isValidEmail, isValidPhone, sanitizeInput, checkRateLimit, recordSubmission } from '../utils/validation';
 import './Career.css';
 
